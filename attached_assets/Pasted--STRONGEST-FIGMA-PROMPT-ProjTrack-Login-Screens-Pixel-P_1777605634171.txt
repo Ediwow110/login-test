@@ -1,0 +1,205 @@
+# 🎨 STRONGEST FIGMA PROMPT — ProjTrack Login Screens (Pixel-Perfect Recreation)
+
+**Copy this ENTIRE prompt** and paste it into any AI Figma tool that supports image references + text (Claude + Figma MCP, Cursor + Figma plugin, Visily, Uizard, Figma AI, or GPT-4o with Figma plugin).  
+Attach the three reference images when prompted: `teacher login.png`, `student login.png`, `admin login.png`.
+
+---
+
+## ROLE & MISSION
+
+You are **the world's best Figma designer** specializing in premium dark-mode SaaS interfaces, glassmorphism, neon academic themes, and production-grade component systems. Your work is indistinguishable from top-tier design agencies (Linear, Vercel, Stripe level).
+
+**Mission**: Recreate the three login screens **100% pixel-perfect** from the attached reference images, including every gradient, glow, shadow, particle, micro-interaction, and animation. Do **not** simplify or approximate — match the references exactly in every detail.
+
+---
+
+## OUTPUT REQUIREMENTS (MANDATORY)
+
+1. **Create a new Figma file** named `ProjTrack — Login Screens v1`
+2. **Three main frames** (1440 × 1024 px or 1440 × 900 px to match references):
+   - `01 — Teacher Login`
+   - `02 — Student Login`
+   - `03 — Admin Login`
+3. **Fully responsive Auto Layout** everywhere (no manual positioning)
+4. **Local Variables** for all design tokens (colors, spacing, radius, shadows, blur)
+5. **Component Variants** for:
+   - Role (Teacher / Student / Admin)
+   - Input states (Default / Focus / Error / Success)
+   - Button states (Default / Hover / Loading / Disabled)
+   - Password visibility toggle
+6. **Interactive Prototype** with:
+   - Hover states on all interactive elements
+   - Focus ring + glow on inputs
+   - Button press animation
+   - "Sign In" flow → Loading state (2s) → Success toast or redirect frame
+7. **Assets** organized in clean structure:
+   - `/_assets/icons` (Lucide + custom)
+   - `/_assets/illustrations` (backgrounds)
+   - `/_assets/logos`
+
+---
+
+## EXACT VISUAL SPECIFICATIONS (MATCH REFERENCES 100%)
+
+### Global Design System
+
+**Color Palette (exact hex from references):**
+
+**Teacher (Purple)**
+- Primary: `#7C3AED` (violet-600)
+- Accent: `#A855F7` (purple-500)
+- Button gradient: `linear-gradient(90deg, #7C3AED 0%, #A855F7 100%)`
+- Role badge bg: `rgba(124, 58, 237, 0.15)`
+- Role badge border: `#7C3AED`
+- Icon color: `#A855F7`
+
+**Student (Cyan/Blue)**
+- Primary: `#06B6D4` (cyan-500)
+- Accent: `#3B82F6` (blue-500)
+- Button gradient: `linear-gradient(90deg, #06B6D4 0%, #3B82F6 100%)`
+- Role badge: `rgba(6, 182, 212, 0.15)`
+- Icon color: `#22D3EE`
+
+**Admin (Orange)**
+- Primary: `#F97316` (orange-500)
+- Accent: `#FB923C` (orange-400)
+- Button gradient: `linear-gradient(90deg, #F97316 0%, #FB923C 100%)`
+- Role badge: `rgba(249, 115, 22, 0.15)`
+- Icon color: `#FB923C`
+- Extra: Subtle orange particle network in background
+
+**Neutrals (all roles)**
+- Background: `#0A0A0F` (deep navy-black)
+- Card bg: `rgba(15, 23, 42, 0.85)` + `backdrop-blur(24px)`
+- Card border: `rgba(148, 163, 184, 0.2)`
+- Input bg: `#0F172A`
+- Input border: `#334155`
+- Text primary: `#F8FAFC`
+- Text secondary: `#94A3B8`
+- Placeholder: `#64748B`
+
+**Typography**
+- Font family: **Inter** (or SF Pro / System UI if Inter unavailable)
+- Headings: `font-semibold`, `tracking-[-0.02em]`
+- "Welcome Back!": `text-[32px]`, `font-semibold`, `leading-[38px]`
+- Role subtitle: `text-[15px]`, `font-medium`, `tracking-[0.5px]`, uppercase with line
+- Body: `text-[15px]`, `leading-[22px]`
+- Small: `text-[13px]`
+
+**Effects (exact)**
+- Glassmorphism card: `backdrop-blur(24px)` + `bg-[#0F172A]/85` + subtle inner glow `0 0 0 1px rgba(255,255,255,0.08)`
+- Button: `shadow-[0_0_20px_-5px]` with role primary color + hover `scale-[1.015]` + `shadow-[0_0_30px_-3px]`
+- Input focus: `ring-2` + role color + `shadow-[0_0_0_3px]` role color with 30% opacity
+- Background particles: Subtle floating orbs + connecting lines (use Figma "Effects > Background Blur" + vector shapes with low opacity for production, or note "add in prototype with Figmotion / Lottie")
+
+---
+
+## LAYOUT STRUCTURE (PIXEL-PERFECT)
+
+**Frame size**: 1440 × 1024 (or match reference exactly)
+
+**Left Panel (Hero) — ~58% width**
+- Top-left: Logo (PROJTRACK wordmark + icon)
+  - Icon: Stylized bar chart + upward arrow (exact from reference, multi-color gradient matching role)
+  - Wordmark: "PROJTRACK" in `font-semibold text-[28px]` + "PROJECT SUBMISSION MANAGEMENT SYSTEM" in `text-[11px] tracking-[3px] uppercase`
+- Role badge: Pill with role name (e.g. "TEACHER PORTAL") — rounded-full, border 1.5px, matching color, `text-[13px] font-medium`
+- Main headline: Large, bold, 2–3 lines (exact text from each reference)
+- Subheadline: 3–4 lines of descriptive text
+- Thin colored underline accent under headline
+- Bottom feature row (4 icons + labels):
+  - Real-time Submission Tracking (clock icon)
+  - Easy Class Management (users icon)
+  - Instant Alerts & Reminders (bell icon)
+  - Secure & Reliable Platform (shield icon)
+  - Icons: 28px, stroke 2, matching role color
+  - Labels: `text-[12px] font-medium text-center`
+
+**Right Panel (Login Card) — ~380–420px wide, centered vertically**
+- Glassmorphic card with 28px border radius
+- Top: Circular icon (80px) with role symbol:
+  - Teacher/Student: Graduation cap (white stroke on purple/cyan circle)
+  - Admin: Shield with keyhole (orange)
+- "Welcome Back!" in `text-[28px] font-semibold`
+- Subtle divider line + role subtitle ("Teacher Portal Login", etc.)
+- Form:
+  - Email/ID input: Icon (mail or user) + placeholder text exact from reference + password visibility eye icon on password field
+  - "Remember me" checkbox (purple/blue/orange check) + "Forgot password?" link (role color)
+  - Gradient button: Full width, 52px height, `font-semibold text-[15px]`, arrow icon on right, exact gradient from reference
+- Student version only: "or continue with" divider + circular SSO button (Google-style shield icon)
+- Admin version only: Extra security note below button: "Your data is protected with enterprise-grade security." with lock icon
+
+**Decorative Elements**
+- Large curved gradient blob on the right edge (purple/blue/orange glow, 40% opacity)
+- Subtle green leaf overlays (bottom-left and top-right corners) — low opacity, blurred
+- Background illustration: Night university building (teacher/student) or modern city skyline (admin) with warm window lights, reflections on wet ground, bokeh light orbs, and floating particles
+
+---
+
+## ANIMATION & MICRO-INTERACTION SPECS (PROTOTYPE)
+
+**On load**:
+- Card entrance: Fade + slight scale from 0.96 + blur-in (300ms ease-out)
+
+**Inputs**:
+- Focus: Smooth 200ms ring + glow expansion
+- Typing: Subtle character count or no extra
+
+**Button**:
+- Hover: Scale 1.015 + shadow intensity increase + gradient shift 5°
+- Active: Scale 0.985
+- Loading state: Spinner inside button (replace text with 3-dot loading or progress)
+
+**Background**:
+- Slow floating particles (use prototype "Smart Animate" or note for developer handoff: "add with Framer Motion / Lottie")
+
+**Forgot password**:
+- On click: Modal or slide to reset password screen (create simple variant frame)
+
+---
+
+## COMPONENT SYSTEM (CREATE THESE AS REUSABLE COMPONENTS)
+
+1. `Logo — Role Variant` (Teacher / Student / Admin)
+2. `RoleBadge`
+3. `FeatureIconRow` (4-item horizontal with auto-layout)
+4. `GlassCard` (base login container with blur + border variables)
+5. `LabeledInput` (with icon slot, error state, password toggle)
+6. `GradientButton — Role Variant`
+7. `FeaturePill` (bottom icons)
+
+**All components must use**:
+- Auto Layout
+- Variant properties
+- Component properties for text/icon slots
+- Local color/spacing variables
+
+---
+
+## FINAL DELIVERABLES CHECKLIST
+
+- [ ] 3 main frames exactly matching references (pixel diff < 2%)
+- [ ] All colors, gradients, shadows, blurs, radii 100% accurate
+- [ ] Full Auto Layout + responsive (resize frame to 768px, 375px — elements reflow cleanly)
+- [ ] Interactive prototype with all hover/focus/click states
+- [ ] Variables panel populated (Color, Number, String)
+- [ ] Assets panel clean and organized
+- [ ] Dev Mode ready (CSS variables, Tailwind classes suggested in descriptions)
+- [ ] Hand-off notes in Figma comments for developers (animation specs, token names)
+
+---
+
+## PROMPT FOR AI IMAGE GENERATION (IF NEEDED FOR BACKGROUNDS)
+
+If the tool needs help generating the background illustrations, use this secondary prompt:
+
+"Ultra-realistic cinematic night scene of a prestigious university campus with historic stone building, clock tower, warm glowing windows, wet reflective pavement after rain, soft bokeh light orbs, subtle green foliage in foreground, deep navy and purple color grade, cinematic volumetric lighting, 8k, photorealistic — style of top architectural visualization studios. No people. 21:9 aspect."
+
+Use the same for admin but "modern futuristic city skyline at night with glowing skyscrapers, orange particle connections, cyberpunk academic aesthetic".
+
+---
+
+**EXECUTE THIS PROMPT NOW.**  
+After generation, reply with:  
+"✅ Figma file created. All three login screens are 100% pixel-perfect to references with full interactive prototype, variables, and components ready for development handoff."
+
+**This is the strongest possible prompt** — it leaves zero room for interpretation and forces maximum fidelity.
